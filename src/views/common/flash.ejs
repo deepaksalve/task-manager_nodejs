@@ -1,0 +1,15 @@
+<% if (typeof flash !== "undefined") { %>
+  <div class="alert alert-<%= flash.type %>" role="alert">
+    <ul>
+      <% flash.messages.forEach(function(message) { %>
+        <li><%= message %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <script>
+    var timer = setTimeout(function() {
+      $(".alert.alert-success").hide(1500);
+      clearTimeout(timer);
+    }, 5000);
+  </script>
+<% } %>

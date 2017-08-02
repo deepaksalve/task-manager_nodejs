@@ -57,3 +57,10 @@ typings/
 # dotenv environment variables file
 .env
 
+# Public dir
+public/
+
+yarn.lock
+src/config/database.json
+src/config/secrets.json
+.sass-cache/

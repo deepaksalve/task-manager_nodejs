@@ -1,0 +1,40 @@
+<div class="row">
+</thead>
+  <div class="pull-left"><h2 class="text-left">Task list</h2></div>
+</div>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body group-info">
+      <table class="table groups-table">
+        <thead>
+          <tr>
+            <th>Status</th><th>Id</th><th>Name</th><th>Description</th><th>Date Created</th><th>Date Updated</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% tasks.forEach(function(task) { %>
+            <tr>
+              <td>
+                <span class="glyphicon glyphicon-<%= task.isCompleted ? 'ok' : 'time' %>"></span>
+              </td>
+              <td><%= task.id %></td>
+              <td><%= task.name %></td>
+              <td><%= task.description %></td>
+              <td><%= task.dateCreated %></td>
+              <td><%= task.dateUpdated %></td>
+              <td>
+                <div class="task-action btn-group">
+                  <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTaskModal-<%= task.id %>">
+                    Update Task
+                  </a>
+                  <a href="/tasks/<%= task.id %>/delete" class="btn btn-danger">Delete Tasks</a>
+                  <%- include('./_edit', { task: task }); %>
+                </div>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

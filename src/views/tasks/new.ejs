@@ -1,0 +1,25 @@
+<div class="row">
+  <h2 class="text-center">Create new task</h2>
+</div>
+
+<div class="row">
+  <div class="col-lg-offset-3.col-lg-6.col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8.col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form action="/tasks" method="post">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Task Name" />
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" name="description"  placeholder="Task Description" />
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary btn-block">Save Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

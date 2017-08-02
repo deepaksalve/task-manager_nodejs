@@ -1,0 +1,7 @@
+<% if (typeof error !== 'undefined') { %>
+  <div class="alert alert-danger" role="alert">
+    <h2><%= error.message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
+  </div>
+<% } %>
